@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  front:
+    build: ./front
+    ports:
+      - 3030:8080
+    volumes:
+      - ./front:/var/www/html
+    environment:
+      - API_URL=http://localhost:3031/
+  api:
+    build: ./api
+    ports:
+      - 3031:8081
+    volumes:
+      - ./api:/var/www/html

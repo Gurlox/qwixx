@@ -1,0 +1,61 @@
+.board {
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
+    height: 80px;
+    margin: 10px;
+    &-red {
+      background-color: $red;
+    }
+    &-yellow {
+      background-color: $yellow;
+    }
+    &-green {
+      background-color: $green;
+    }
+    &-blue {
+      background-color: $blue;
+    }
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3em;
+      font-weight: bold;
+      margin: 5px;
+      width: 69px;
+      height: 69px;
+      border-radius: 5px;
+      &-red {
+        background-color: $lightRed;
+        color: $red;
+      }
+      &-yellow {
+        background-color: $lightYellow;
+        color: $yellow;
+      }
+      &-green {
+        background-color: $lightGreen;
+        color: $green;
+      }
+      &-blue {
+        background-color: $lightBlue;
+        color: $blue;
+      }
+      .lock-red {
+        @include lock($red);
+      }
+      .lock-yellow {
+        @include lock($yellow);
+      }
+      .lock-green {
+        @include lock($green);
+      }
+      .lock-blue {
+        @include lock($blue);
+      }
+    }
+  }
+}
+

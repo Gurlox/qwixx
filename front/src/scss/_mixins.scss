@@ -1,0 +1,21 @@
+@mixin lock($color) {
+  display: block;
+  background: $color;
+  border-radius: 3px;
+  width: 25px;
+  height: 20px;
+  margin-top: 15px;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 3px solid $color;
+    top: -14px;
+    left: 2.3px;
+    width: 15px;
+    height: 27px;
+    border-radius: 35px 35px 0 0;
+  }
+}
